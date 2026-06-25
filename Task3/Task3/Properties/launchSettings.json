@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Task3": {
-      "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\kosty\\source\\repos\\Task3\\values.json C:\\Users\\kosty\\source\\repos\\Task3\\tests.json C:\\Users\\kosty\\source\\repos\\Task3\\report.json"
-    }
-  }
-}
