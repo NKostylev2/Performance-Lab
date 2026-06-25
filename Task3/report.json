@@ -1,0 +1,84 @@
+{
+  "Tests": [
+    {
+      "Id": 2,
+      "Title": "Smoke test",
+      "Value": "passed"
+    },
+    {
+      "Id": 41,
+      "Title": "Debug test",
+      "Value": "passed"
+    },
+    {
+      "Id": 73,
+      "Title": "Performance test",
+      "Value": "passed",
+      "Values": [
+        {
+          "Id": 345,
+          "Title": "Maxperf",
+          "Value": "passed",
+          "Values": [
+            {
+              "Id": 230,
+              "Title": "Percent",
+              "Values": [
+                {
+                  "Id": 234,
+                  "Title": "200",
+                  "Value": "passed"
+                },
+                {
+                  "Id": 653,
+                  "Title": "300",
+                  "Value": "passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": 110,
+          "Title": "Stability test",
+          "Value": "failed",
+          "Values": [
+            {
+              "Id": 261,
+              "Title": "Percent",
+              "Values": [
+                {
+                  "Id": 238,
+                  "Title": "160",
+                  "Value": "passed"
+                },
+                {
+                  "Id": 690,
+                  "Title": "240",
+                  "Value": "failed"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 122,
+      "Title": "Security test",
+      "Value": "failed",
+      "Values": [
+        {
+          "Id": 5321,
+          "Title": "Confidentiality",
+          "Value": "passed"
+        },
+        {
+          "Id": 5322,
+          "Title": "Integrity",
+          "Value": "failed"
+        }
+      ]
+    }
+  ]
+}

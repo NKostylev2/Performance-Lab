@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Task2": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\kosty\\source\\repos\\Task2\\coords.txt C:\\Users\\kosty\\source\\repos\\Task2\\dots.txt"
+    }
+  }
+}
