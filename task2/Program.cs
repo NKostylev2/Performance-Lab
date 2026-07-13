@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace Task2
@@ -56,10 +56,8 @@ namespace Task2
             {
                 float x0 = float.Parse(center[0]);
                 float y0 = float.Parse(center[1]);
-                float x = float.Parse(radius[0]);
-                float y = float.Parse(radius[1]);
-
-                double r0 = (x0 - x) * (x0 - x) + (y0 - y) * (y0 - y);
+                double aAxis = double.Parse(radius[0]);
+                double bAxis = double.Parse(radius[1]);
 
                 foreach (string line in linesdot_clear)
                 {
@@ -68,11 +66,15 @@ namespace Task2
                     float a = float.Parse(dot[0]);
                     float b = float.Parse(dot[1]);
 
-                    double r = (x0 - a) * (x0 - a) + (y0 - b) * (y0 - b);
+                    double value = ((a - x0) * (a - x0)) / (aAxis * aAxis) +
+                                   ((b - y0) * (b - y0)) / (bAxis * bAxis);
 
-                    if (r0 == r) Console.WriteLine("{0}\n", 0);
-                    if (r0 > r) Console.WriteLine("{0}\n", 1);
-                    if (r0 < r) Console.WriteLine("{0}\n", 2);
+                    if (value == 1)
+                        Console.WriteLine(0);
+                    else if (value < 1)
+                        Console.WriteLine(1);
+                    else
+                        Console.WriteLine(2);
                 }
 
             }
