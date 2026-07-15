@@ -16,13 +16,21 @@ namespace Task1
 
             try
             {
-                int n1 = int.Parse(args[0]);
-                int m1 = int.Parse(args[1]);
-                int n2 = int.Parse(args[2]);
-                int m2 = int.Parse(args[3]);
+                int[] nums = new int[args.Length];
 
-                Task<string> arr1 = Task.Run(() => BuildPath(n1, m1));
-                Task<string> arr2 = Task.Run(() => BuildPath(n2, m2));
+                for (int i = 0; i < args.Length; i++)
+                {
+                    nums[i] = int.Parse(args[i]);
+
+                    if (nums[i] <= 0)
+                    {
+                        Console.WriteLine("Некорректные данные");
+                        return;
+                    }
+                }
+
+                Task<string> arr1 = Task.Run(() => BuildPath(nums[0], nums[1]));
+                Task<string> arr2 = Task.Run(() => BuildPath(nums[2], nums[3]));
                 Task.WaitAll(arr1, arr2);
 
                 string result = arr1.Result + arr2.Result;
